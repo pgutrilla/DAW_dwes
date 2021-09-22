@@ -1,4 +1,4 @@
-#Este repositorio lo utilizo para aprender a usar GIT#
+# Este repositorio lo utilizo para aprender a usar GIT#
 
 
 
