@@ -1,13 +1,5 @@
 <?php
 
-// $a = 5;
-// $b = 3;
-// $c = 1;
-
-$a = -3;
-$b = 5;
-$c = 8;
-
 function o_segundo_grado( $a, $b , $c ){
     
     $arrResultado = [];
@@ -33,7 +25,13 @@ function o_segundo_grado( $a, $b , $c ){
     }
 }
 
+// $a = 5;
+// $b = 3;
+// $c = 1;
 
+$a = -3;
+$b = 5;
+$c = 8;
 
 // echo o_segundo_grado( $a, $b, $c ); 
 print_r(o_segundo_grado( $a, $b, $c )); 
