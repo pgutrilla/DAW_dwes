@@ -23,13 +23,7 @@
                 break;
 
             case '/':
-
-                if( $operando2 != 0 ){
-                    $solucion = $operando1 / $operando2;
-                } else {
-                    $solucion = 'No se puede dividir entre 0';
-                }
-                
+                $solucion = $operando1 / $operando2;
                 break;    
 
             case '+':
