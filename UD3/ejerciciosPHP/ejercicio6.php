@@ -39,10 +39,10 @@
         $strHTML .= 'La solución es: ' . $solucion;
 
     } else {
-        $strHTML .= '<form method="POST" action="'. htmlspecialchars($_SERVER["PHP_SELF"]).'">
-                        <label>Operador 1</label><input type="number" value="" name="operando1"> <br>
-                        <label>Operador 2</label><input type="number" value="" name="operando2"> <br>
-                        <select name="operador">
+        $strHTML .= '<form method="POST" action="'. htmlspecialchars($_SERVER["PHP_SELF"]).'">    
+                        
+                        <label>1 - ¿Cual es mi fruta favorita? </label>
+                        <select name="pregunta1">
                             <optgroup label="Operadores">
                                 <option selected>*</option>
                                 <option>/</option>
@@ -50,6 +50,47 @@
                                 <option >+</option>
                             </optgroup>
                         </select>
+                        
+                        <label>Pregunta 1</label>
+                        <select name="pregunta1">
+                            <optgroup label="Operadores">
+                                <option selected>*</option>
+                                <option>/</option>
+                                <option>-</option>
+                                <option >+</option>
+                            </optgroup>
+                        </select>
+
+                        <label>Pregunta 1</label>
+                        <select name="pregunta1">
+                            <optgroup label="Operadores">
+                                <option selected>*</option>
+                                <option>/</option>
+                                <option>-</option>
+                                <option >+</option>
+                            </optgroup>
+                        </select>
+
+                        <label>Pregunta 1</label>
+                        <select name="pregunta1">
+                            <optgroup label="Operadores">
+                                <option selected>*</option>
+                                <option>/</option>
+                                <option>-</option>
+                                <option >+</option>
+                            </optgroup>
+                        </select>
+
+                        <label>Pregunta 1</label>
+                        <select name="pregunta1">
+                            <optgroup label="Operadores">
+                                <option selected>*</option>
+                                <option>/</option>
+                                <option>-</option>
+                                <option >+</option>
+                            </optgroup>
+                        </select>
+
                         <input type="submit" value="enviar">
                     </form>';
         }

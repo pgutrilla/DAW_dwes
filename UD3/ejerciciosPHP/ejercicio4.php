@@ -10,7 +10,7 @@
 
     $solucion = '';
 
-    if( !empty($_POST['operando1']) && !empty($_POST['operando2']) && !empty($_POST['operador']) ) {
+    if( is_numeric($_POST['operando1']) && is_numeric($_POST['operando2']) && !empty($_POST['operador']) ) {
 
         $operando1 = intval($_POST['operando1']);
         $operando2 = intval($_POST['operando2']);
