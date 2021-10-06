@@ -1,9 +1,14 @@
 <?php
 
-    if(isset($_POST) && !empty($_POST)){
-        $nombre = $_POST['nombre'];
-
-        var_dump($nombre);
+    if(isset($_POST)){
+        $nombres = $_POST['nombre'];
+        $nNombre = count($nombres);
         
+        if( $nNombre > 0 ){
+            var_dump($nombres);
+        } else {
+            include('ejercicio5.php');
+        }
+
     } 
 ?>

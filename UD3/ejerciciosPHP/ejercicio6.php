@@ -1,37 +1,31 @@
 <?php
 
     $strHTML = '';
-    
-    // $operando1 = $_POST['operando1'];
-    // $operando2 = $_POST['operando2'];
-
-    // echo $operando1;
-    // echo $operando2;
-
     $solucion = '';
 
-    if( !empty($_POST['operando1']) && !empty($_POST['operando2']) && !empty($_POST['operador']) ) {
+    if( !empty($_POST['pregunta1']) && !empty($_POST['pregunta2']) && !empty($_POST['pregunta3']) && !empty($_POST['pregunta4']) && !empty($_POST['pregunta5']) ) {
 
-        $operando1 = intval($_POST['operando1']);
-        $operando2 = intval($_POST['operando2']);
-
-        $operador = $_POST['operador'];
+        $pregunta1 = intval($_POST['pregunta1']);
+        $pregunta2 = intval($_POST['pregunta2']);
+        $pregunta1 = intval($_POST['pregunta3']);
+        $pregunta2 = intval($_POST['pregunta4']);
+        $pregunta1 = intval($_POST['pregunta5']);
 
         switch($operador){
             case '*':
-                $solucion = $operando1 * $operando2;
+                $solucion = $pregunta1 * $pregunta2;
                 break;
 
             case '/':
-                $solucion = $operando1 / $operando2;
+                $solucion = $pregunta1 / $pregunta2;
                 break;    
 
             case '+':
-                $solucion = $operando1 + $operando2;
+                $solucion = $pregunta1 + $pregunta2;
                 break;    
 
             case '-':
-                $solucion = $operando1 - $operando2;
+                $solucion = $pregunta1 - $pregunta2;
                 break;    
 
         }
@@ -42,54 +36,39 @@
         $strHTML .= '<form method="POST" action="'. htmlspecialchars($_SERVER["PHP_SELF"]).'">    
                         
                         <label>1 - ¿Cual es mi fruta favorita? </label>
-                        <select name="pregunta1">
-                            <optgroup label="Operadores">
-                                <option selected>*</option>
-                                <option>/</option>
-                                <option>-</option>
-                                <option >+</option>
-                            </optgroup>
-                        </select>
+                            <input type="radio" name="pregunta1" value=1>Pera</input>
+                            <input type="radio" name="pregunta1" value=2>Melón</input>
+                            <input type="radio" name="pregunta1" value=3>Sandia</input>
+                            <input type="radio" name="pregunta1" value=4>Fresas</input>
+                        <br><br>
                         
-                        <label>Pregunta 1</label>
-                        <select name="pregunta1">
-                            <optgroup label="Operadores">
-                                <option selected>*</option>
-                                <option>/</option>
-                                <option>-</option>
-                                <option >+</option>
-                            </optgroup>
-                        </select>
+                        <label>2 - ¿Cual es mi colo favorito? </label>
+                            <input type="radio" name="pregunta2" value=1>Verde</input>
+                            <input type="radio" name="pregunta2" value=2>Cyan</input>
+                            <input type="radio" name="pregunta2" value=3>Magenta</input>
+                            <input type="radio" name="pregunta2" value=4>Amarillo</input>
+                        <br><br>
 
-                        <label>Pregunta 1</label>
-                        <select name="pregunta1">
-                            <optgroup label="Operadores">
-                                <option selected>*</option>
-                                <option>/</option>
-                                <option>-</option>
-                                <option >+</option>
-                            </optgroup>
-                        </select>
+                        <label>3 - ¿Que me gusta menos? </label>
+                            <input type="radio" name="pregunta3" value=1>Los Gnomos</input>
+                            <input type="radio" name="pregunta3" value=2>Los calcetines</input>
+                            <input type="radio" name="pregunta3" value=3>Los columpios</input>
+                            <input type="radio" name="pregunta3" value=4>Los malditos gnomos</input>
+                        <br><br>
 
-                        <label>Pregunta 1</label>
-                        <select name="pregunta1">
-                            <optgroup label="Operadores">
-                                <option selected>*</option>
-                                <option>/</option>
-                                <option>-</option>
-                                <option >+</option>
-                            </optgroup>
-                        </select>
+                        <label>4 - ¿Por donde sale el sol? </label>
+                                <input type="radio" name="pregunta4" value=1>Norte</input>
+                                <input type="radio" name="pregunta4" value=2>Sur</input>
+                                <input type="radio" name="pregunta4" value=3>Este</input>
+                                <input type="radio" name="pregunta4" value=4>Oeste</input>
+                        <br><br>
 
-                        <label>Pregunta 1</label>
-                        <select name="pregunta1">
-                            <optgroup label="Operadores">
-                                <option selected>*</option>
-                                <option>/</option>
-                                <option>-</option>
-                                <option >+</option>
-                            </optgroup>
-                        </select>
+                        <label>5 - ¿Que prefiero? </label>
+                            <input type="radio" name="pregunta5" value=1>Beber agua</option>
+                            <input type="radio" name="pregunta5" value=2>Dormir</option>
+                            <input type="radio" name="pregunta5" value=3>Comer</option>
+                            <input type="radio" name="pregunta5" value=4>Saltar</option>
+                        <br><br>
 
                         <input type="submit" value="enviar">
                     </form>';
