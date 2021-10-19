@@ -6,6 +6,6 @@ Subida de ficheros:
 
 <form action="procesar_subida.php" method="post" enctype="multipart/form-data">
     Escoja un fichero
-    <input type="file" name="fichero">
+    <input type="file" name="ficheros[]" multiple>
     <input type="submit" value="subir fichero">
 </form>
