@@ -20,7 +20,18 @@
     <br><br>
     <a href="?method=logout">logout</a>
     <br><br>
-    <?php echo $this->cookieDeseos;?>
+    <?php 
+    
+    $deseos = $this->cookieDeseos;
+    $counter = 0;
+    foreach( $deseos as $deseo ){
+        echo $deseo . '<a href="?method=delete&indice='. $counter . '" style="color: red;"> Borrar</a></br>';   
+        $counter++; 
+    }
+
+    echo '</br>'
+    
+    ?>
     
     <form method="POST" action="?method=new">
         <label>Deseo</label><input type="text" value="" name="deseo"><br>

@@ -67,8 +67,8 @@ class App
       $this->cookieUser = json_decode($_COOKIE['user']);
       $this->cookiePassword = $_COOKIE['password'];
 
-      if (isset($_COOKIE['user']) ) {   
-        $this->cookieDeseos = $_COOKIE['deseos'];
+      if (isset($_COOKIE['deseos']) ) {   
+        $this->cookieDeseos =  unserialize($_COOKIE['deseos']);
       } else {
         $this->cookieDeseos = 'No hay deseos.';
       }
@@ -187,6 +187,27 @@ class App
     
     return false;
 
+  }
+
+  public function delete( ){
+    if( isset($_COOKIE['deseos']) && isset($_GET['indice'])){
+      $arrDeseos = unserialize($_COOKIE['deseos']);
+      $indice =  intval($_GET['indice']);
+
+      unset($arrDeseos[$indice]);
+
+      $arrDeseos = array_values($arrDeseos);
+
+      setcookie("deseos", serialize($arrDeseos), time() + 3600);
+
+    }
+
+    $this->indexReload();
+
+  }
+
+  public function empty(  ){
+    setcookie("deseos", '', time() - 1 );
   }
 
   public function eraseCookiesLogin(  ){
