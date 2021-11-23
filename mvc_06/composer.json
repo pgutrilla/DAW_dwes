@@ -1,0 +1,20 @@
+{
+    "name": "a2/mvc_06",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "Dompdf\\": "vendor/dompdf"
+        }
+    },
+    "authors": [
+        {
+            "name": "pgutrilla",
+            "email": "gracia.pablo.smr@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "~0.7"
+    }
+}
